@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="web" Class="DataDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=VIP-PC\SQLEXPRESS;Initial Catalog=web;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="webConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Tai_Khoan" Member="Tai_Khoans">
+    <Type Name="Tai_Khoan">
+      <Column Name="MaTK" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenTK" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="MatKhau" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Quyen" Type="System.String" DbType="NVarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="DiaChiEmail" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Sodt" Type="System.String" DbType="NVarChar(12) NOT NULL" CanBeNull="false" />
+      <Association Name="Tai_Khoan_Don_Hang" Member="Don_Hangs" ThisKey="MaTK" OtherKey="MaTK" Type="Don_Hang" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SanPham" Member="SanPhams">
+    <Type Name="SanPham">
+      <Column Name="MaSP" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MaDM" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TenSP" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Gia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MoTa" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="Anh" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="SanPham_Chi_Tiet_Don_Hang" Member="Chi_Tiet_Don_Hangs" ThisKey="MaSP" OtherKey="MaSP" Type="Chi_Tiet_Don_Hang" />
+      <Association Name="Danh_Muc_SanPham" Member="Danh_Muc" ThisKey="MaDM" OtherKey="MaDM" Type="Danh_Muc" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Don_Hang" Member="Don_Hangs">
+    <Type Name="Don_Hang">
+      <Column Name="madh" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MaTK" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="NgayBan" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TongTien" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TinhTrang" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Association Name="Don_Hang_Chi_Tiet_Don_Hang" Member="Chi_Tiet_Don_Hangs" ThisKey="madh" OtherKey="madh" Type="Chi_Tiet_Don_Hang" />
+      <Association Name="Tai_Khoan_Don_Hang" Member="Tai_Khoan" ThisKey="MaTK" OtherKey="MaTK" Type="Tai_Khoan" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Danh_Muc" Member="Danh_Mucs">
+    <Type Name="Danh_Muc">
+      <Column Name="MaDM" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenDM" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="Danh_Muc_SanPham" Member="SanPhams" ThisKey="MaDM" OtherKey="MaDM" Type="SanPham" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Chi_Tiet_Don_Hang" Member="Chi_Tiet_Don_Hangs">
+    <Type Name="Chi_Tiet_Don_Hang">
+      <Column Name="MaSP" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="madh" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Don_Hang_Chi_Tiet_Don_Hang" Member="Don_Hang" ThisKey="madh" OtherKey="madh" Type="Don_Hang" IsForeignKey="true" />
+      <Association Name="SanPham_Chi_Tiet_Don_Hang" Member="SanPham" ThisKey="MaSP" OtherKey="MaSP" Type="SanPham" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

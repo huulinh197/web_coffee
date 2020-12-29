@@ -1,0 +1,41 @@
+﻿@using web_coffee.Models;
+@{
+    ViewBag.Title = "Category";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <link href="~/Content/css/styles.css" type="text/css" rel="stylesheet" media="all">
+    <link href="~/Content/css/tch.min.css" type="text/css" rel="stylesheet" media="all">
+</head>
+<body>
+
+    <div class="collection_menu_wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 stikySidebar">
+                    <aside class="sidebar_menu">
+                        <ul>
+                            @foreach (var p in Model)
+                            {
+                                <li><a class="menu_scroll_link" href="#">@p.TenDM </a></li>
+                            }
+                        </ul>
+
+                    </aside>
+                    
+                </div>
+                <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12 border_right_before">
+                    <div class="block_menu_item">
+                        @Html.Action("Product");
+                    </div>
+                       
+                </div>
+        </div>
+        </div>
+        </div>
+
+         
+</body>
+
+

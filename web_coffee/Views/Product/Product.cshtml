@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "Product";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <link href="~/Content/css/styles.css" type="text/css" rel="stylesheet" media="all">
+    <link href="~/Content/css/tch.min.css" type="text/css" rel="stylesheet" media="all">
+</head>
+<body>
+    <div id="collection">
+        <div class="collection_menu_wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 stikySidebar">
+                        <aside class="sidebar_menu">
+                            <ul>
+                                <li><a class="menu_scroll_link active" href="#"> </a></li>
+                            </ul>
+                        </aside>
+                        @foreach (var item in Model)
+                        {
+                            <ul>
+                                <li><a>@item.TenDM </a></li>
+                            </ul>
+                        }
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+       
+</body>
+
+
