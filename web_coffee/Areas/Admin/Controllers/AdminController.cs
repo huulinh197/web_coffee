@@ -20,8 +20,8 @@ namespace web_coffee.Areas.Admin.Controllers
         [HttpGet]
         public ActionResult Create()
         {
-
-
+            //load dropdownlist
+            ViewBag.MaDM = new SelectList(db.Danh_Mucs.OrderBy(n => n.TenDM), "MaDM", "TenDM");
             return View();
         }
     }
