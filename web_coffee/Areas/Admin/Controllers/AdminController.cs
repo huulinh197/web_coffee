@@ -14,6 +14,7 @@ namespace web_coffee.Areas.Admin.Controllers
 
         public ActionResult Index()
         {
+            var model = db.SanPhams.ToList();
             return View(db.SanPhams);
         }
         [HttpGet]
