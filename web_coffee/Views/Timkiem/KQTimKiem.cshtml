@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "KQTimKiem";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Kết quả tìm kiếm</h2>
+
+
+<div class="flex_wrap display_flex menu_lists">
+    @*@foreach (var item in Model)
+        {
+            <h3 class="block_menu_item_title"><span class="line_after_heading section_heading">@item.MaDM </span></h3>
+
+        }*@
+
+    @foreach (var p in Model)
+    {
+        <div class="menu_item">
+            <div class="menu_item_image">
+                <a href="@Url.Action("Detail","DetailProduct",new { id= p.MaSP})"><img src="~/Content/images/@p.Anh" /></a>
+            </div>
+            <div class="menu_item_info bg_white">
+                <h3><a href="@Url.Action("Detail","DetailProduct",new { id= p.MaSP})">@p.TenSP</a></h3>
+                <div class="price_product_item">@p.Gia</div>
+                <a class="menu_item_action animate_btn" href="@Url.Action("Index","Order")" target="_blank" title="Mua Ngay">Mua ngay</a>
+            </div>
+        </div>
+    }
+    }
+
+</div>

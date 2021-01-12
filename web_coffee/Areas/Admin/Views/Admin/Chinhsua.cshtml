@@ -1,18 +1,20 @@
 ﻿@using web_coffee.Models;
 @model SanPham
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Chinhsua";
     Layout = "~/Areas/Admin/Views/Shared/Admin.cshtml";
 }
 
-<h2>Thêm sản phẩm</h2>
-@using (Html.BeginForm("Create", "Admin", FormMethod.Post,new { @enctype="multipart/form-data"}))
+<h2>Chỉnh sửa sản phẩm</h2>
+
+@using (Html.BeginForm("Chỉnh sửa sản phẩm", "Admin", FormMethod.Post, new { @enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-       
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        @Html.ValidationSummary(true)
+        @Html.Hidden("MaSP",Model.MaSP);
         <div class="form-group">
             @Html.LabelFor(model => model.MaSP, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -53,21 +55,16 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Anh, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <input name="Anh" type="file"/>
-             <span style="color:red;">@ViewBag.upload</span> 
+                <input name="Anh" type="file" />
+                <span style="color:red;">@ViewBag.upload</span>
             </div>
         </div>
         <div class="form-group">
-            <div class="col-md-offset-2 col-md-10" >
-                <input type="submit" value="Create" class="btn btn-default" />
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Lưu" class="btn btn-success" />
             </div>
         </div>
 
-   
+
     </div>
 }
-<div>
-    <h2>Quay về</h2>
-    @Html.ActionLink("Admin","Index")
-</div>
-

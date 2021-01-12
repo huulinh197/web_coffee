@@ -45,9 +45,14 @@ namespace web_coffee.Models
     partial void InsertChi_Tiet_Don_Hang(Chi_Tiet_Don_Hang instance);
     partial void UpdateChi_Tiet_Don_Hang(Chi_Tiet_Don_Hang instance);
     partial void DeleteChi_Tiet_Don_Hang(Chi_Tiet_Don_Hang instance);
-    #endregion
-		
-		public DataDataContext() : 
+
+        internal object Entry(SanPham model)
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
+
+        public DataDataContext() : 
 				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["webConnectionString"].ConnectionString, mappingSource)
 		{
 			OnCreated();

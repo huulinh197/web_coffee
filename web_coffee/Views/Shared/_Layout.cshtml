@@ -86,23 +86,16 @@
                         </li>
 
                         <li>
-                            <a href="/pages/our-stores" title="Cửa hàng">Cửa hàng</a>
+                            <a href="@Url.Action("Index","Login")" title="Cửa hàng">Đăng nhập</a>
                         </li>
-                        <li class="search hidden-xs hidden-sm">
-                            <a href="javascript:void(0)"><svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg><!-- <i class="fas fa-search"></i> --></a>
-                            <div class="search_input_wrap">
-                                <form class="search_form" action="/search">
-                                    <div class="search-radio">
-                                        <input type="radio" name="type" value="product" checked="checked">
-                                        <span>Thức uống</span>
-                                        <input type="radio" name="type" value="article">
-                                        <span>Tin tức</span>
-                                    </div>
-                                    <div class="search-inner">
-                                        <input required="" name="q" maxlength="40" autocomplete="off" class="search-input" type="text" size="20" placeholder="Tìm kiếm sản phẩm...">
-                                        <button type="submit" class="btn-search btn" id="search-header-btn"><svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg><!-- <i class="fas fa-search"></i> --></button>
-                                    </div>
-                                </form>
+                            
+                        <li>
+                            <div >
+                                @using (Html.BeginForm("KQTimKiem","Timkiem"))
+                                {
+                                    <input type="text" name="TuKhoa" placeholder="Nhập từ khóa cần tìm kiếm" />
+                                    <input type="submit" value="Tìm" />
+                                }
                             </div>
                         </li>
                     </ul>
@@ -421,7 +414,16 @@
 
 
     <script type="text/javascript" id="">var _siteId="677391311";(function(){var a=window;if(!a.admp_event){var b=window.admp_event=function(){b.queue.push(arguments)};b.siteId=_siteId;b.track=b;b.queue=[];a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="//st-a.anthill.vn/insight.js";var c=document.getElementsByTagName("script")[0];c.parentNode.insertBefore(a,c)}})();</script>
+    
     <div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div>
+    element.style {
+    .header_menu ul li {
+    display: inline-block;
+    padding: 19px 10px 19px;
+    position: relative;
+    }
+    }
+
 </body>
 
 </html>

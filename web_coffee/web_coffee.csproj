@@ -201,7 +201,9 @@
     <Compile Include="Areas\Admin\Controllers\AdminController.cs" />
     <Compile Include="Controllers\DetailProductController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
+    <Compile Include="Controllers\TimkiemController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -264,6 +266,8 @@
     <Content Include="Areas\Admin\Views\Shared\Admin.cshtml" />
     <Content Include="Areas\Admin\Views\Admin\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Admin\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Admin\Chinhsua.cshtml" />
+    <Content Include="Areas\Admin\Views\Admin\Xoa.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -305,19 +309,21 @@
     <Content Include="Views\Manage\ManageLogins.cshtml" />
     <Content Include="Views\Manage\SetPassword.cshtml" />
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
-    <Content Include="Views\Shared\menu.cshtml" />
     <Content Include="Views\Shared\blog.cshtml" />
     <Content Include="Views\Shared\banner.cshtml" />
     <Content Include="Views\Shared\footer.cshtml" />
     <Content Include="Views\Home\Category.cshtml" />
     <Content Include="Views\Menu\Index.cshtml" />
     <Content Include="Views\Product\Product.cshtml" />
-    <Content Include="Views\Product\Product1.cshtml" />
-    <Content Include="Views\Product\Product2.cshtml" />
     <Content Include="Views\Home\Product.cshtml" />
     <Content Include="Views\Shared\Detail_Product.cshtml" />
     <Content Include="Views\DetailProduct\Index.cshtml" />
     <Content Include="Views\DetailProduct\Detail.cshtml" />
+    <Content Include="Views\Order\Index.cshtml" />
+    <Content Include="Views\Timkiem\KQTimKiem.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Login\View.cshtml" />
+    <Content Include="Views\Login\loi.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -7,63 +7,44 @@
 
 
     <!-- menu -->
-<div class="w3ls-services section-w3ls">
-    <div class="container">
-        <h3 class="w3ls-title">
-            <span>M</span>enu
-            @Html.ActionLink("Danh sách", "Index", "Menu")
-        </h3>
-        <div class="grid">
-            <figure class="col-md-3 col-xs-6 w3l-service-hover">
-                <img src="~/Content/images/g2.jpg" alt="t1" class="img-responsive" />
-                <figcaption>
-                    <h4>cocktails</h4>
-                </figcaption>
-            </figure>
-            <figure class="col-md-3 col-xs-6  w3l-service-hover s2">
-                <img src="~/Content/images/g3.jpg" alt="t2" class="img-responsive" />
-                <figcaption>
-                    <h4>cold beverages</h4>
-                </figcaption>
-            </figure>
-            <figure class="col-md-3 col-xs-6 w3l-service-hover s3">
-                <img src="~/Content/images/g1.jpg" alt="t1" class="img-responsive" />
-                <figcaption>
-                    <h4> beverages</h4>
-                </figcaption>
-            </figure>
-            <figure class="col-md-3 col-xs-6 w3l-service-hover s4">
-                <img src="~/Content/images/g4.jpg" alt="t3" class="img-responsive" />
-                <figcaption>
-                    <h4>desserts</h4>
-                </figcaption>
-            </figure>
-            <div class="clearfix"></div>
-            <figure class="col-md-3 col-xs-6  w3l-service-hover s2">
-                <img src="~/Content/images/g3.jpg" alt="t2" class="img-responsive" />
-                <figcaption>
-                    <h4>cocktails</h4>
-                </figcaption>
-            </figure>
-            <figure class="col-md-3 col-xs-6 w3l-service-hover s4">
-                <img src="~/Content/images/g4.jpg" alt="t3" class="img-responsive" />
-                <figcaption>
-                    <h4>hot beverages</h4>
-                </figcaption>
-            </figure>
-
-            <figure class="col-md-3 col-xs-6 w3l-service-hover">
-                <img src="~/Content/images/g2.jpg" alt="t1" class="img-responsive" />
-                <figcaption>
-                    <h4>coffee</h4>
-                </figcaption>
-            </figure>
-            <figure class="col-md-3 col-xs-6 w3l-service-hover s3">
-                <img src="~/Content/images/g1.jpg" alt="t1" class="img-responsive" />
-                <figcaption>
-                    <h4>mocktails</h4>
-                </figcaption>
-            </figure>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-xs-12">
+            <h2 class="menu_home_title line_after_heading section_heading">Menu</h2>
+            <div class="viewmore_menu_home"><a class="animate_btn" href="@Url.Action("Category","Home")" title="xem thêm tất cả sản phẩm">xem thêm tất cả sản phẩm</a></div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="menu_list_home flex_wrap display_flex">
+            <div class="menu_item">
+                <div class="menu_item_image">
+                    <a href="/products/tra-buoi-mat-ong" title="TRÀ OOLONG BƯỞI MẬT ONG"><img src="//product.hstatic.net/1000075078/product/tra_buoi_5c4c5ce2d4e44042a069ec9011ef1a9f_large.jpg" alt="tra oolong buoi mat ong"></a>
+                </div>
+                <div class="menu_item_info">
+                    <h3><a href="/products/tra-buoi-mat-ong" title="TRÀ OOLONG BƯỞI MẬT ONG">TRÀ OOLONG BƯỞI MẬT ONG</a></h3>
+                    <div class="price_product_item">50,000 đ</div><a class="menu_item_action animate_btn" href="@Url.Action("Index","Order")" target="_blank" title="Mua Ngay">Mua ngay</a>	<a class="menu_item_action_view" href="/products/tra-buoi-mat-ong">Tìm hiểu thêm</a>
+                </div>
+            </div>
+            <div class="menu_item">
+                <div class="menu_item_image">
+                    <a href="/products/tra-sua-mac-ca-tran-chau-trang" title="TRÀ SỮA MẮC CA TRÂN CHÂU TRẮNG"><img src="//product.hstatic.net/1000075078/product/macca_d56d5ab8dde4455aa7f19d29b5fff763_large.jpg" alt="tra sua mac ca tran chau trang"></a>
+                    <div class="best_seller"><img class="svg-best-seller" src="//file.hstatic.net/1000075078/file/orion_diploma.svg" alt=""><span>Bán chạy nhất</span></div>
+                </div>
+                <div class="menu_item_info">
+                    <h3><a href="/products/tra-sua-mac-ca-tran-chau-trang" title="TRÀ SỮA MẮC CA TRÂN CHÂU TRẮNG">TRÀ SỮA MẮC CA TRÂN CHÂU TRẮNG</a></h3>
+                    <div class="price_product_item">45,000 đ</div><a class="menu_item_action animate_btn" href="@Url.Action("Index","Order")" target="_blank" title="Mua Ngay">Mua ngay</a>	<a class="menu_item_action_view" href="/products/tra-sua-mac-ca-tran-chau-trang">Tìm hiểu thêm</a>
+                </div>
+            </div>
+            <div class="menu_item">
+                <div class="menu_item_image">
+                    <a href="/products/tra-dao-cam-sa" title="TRÀ ĐÀO CAM SẢ"><img src="//product.hstatic.net/1000075078/product/tra_dao_5f3925d9bfca4d0abc17f95b05fff5f7_large.jpg" alt="tra dao cam sa"></a>
+                    <div class="best_seller"><img class="svg-best-seller" src="//file.hstatic.net/1000075078/file/orion_diploma.svg" alt=""><span>Bán chạy nhất</span></div>
+                </div>
+                <div class="menu_item_info">
+                    <h3><a href="/products/tra-dao-cam-sa" title="TRÀ ĐÀO CAM SẢ">TRÀ ĐÀO CAM SẢ</a></h3>
+                    <div class="price_product_item">45,000 đ</div><a class="menu_item_action animate_btn" href="@Url.Action("Index","Order")" target="_blank" title="Mua Ngay">Mua ngay</a>	<a class="menu_item_action_view" href="/products/tra-dao-cam-sa">Tìm hiểu thêm</a>
+                </div>
+            </div>
+            <div class="menu_item"><div class="menu_item_image"><a href="/products/espresso-1" title="ESPRESSO"><img src="//product.hstatic.net/1000075078/product/espressonong_f60fc6f25baa404c8a8bfc40c396f27e_large.jpg" alt="espresso"></a></div><div class="menu_item_info"><h3><a href="/products/espresso-1" title="ESPRESSO">ESPRESSO</a></h3><div class="price_product_item">35,000 đ</div><a class="menu_item_action animate_btn" href="@Url.Action("Index","Order")" target="_blank" title="Mua Ngay">Mua ngay</a><a class="menu_item_action_view" href="/products/espresso-1">Tìm hiểu thêm</a></div></div><div class="menu_item"><div class="menu_item_image"><a href="/products/caramel-macchiato" title="CARAMEL MACCHIATO"><img src="//product.hstatic.net/1000075078/product/caramel_macchiato_24ff98b746e84b7aba702c01a60b1a52_large.jpg" alt="caramel macchiato"></a></div><div class="menu_item_info"><h3><a href="/products/caramel-macchiato" title="CARAMEL MACCHIATO">CARAMEL MACCHIATO</a></h3><div class="price_product_item">55,000 đ</div><a class="menu_item_action animate_btn" href="@Url.Action("Index","Order")" target="_blank" title="Mua Ngay">Mua ngay</a><a class="menu_item_action_view" href="/products/caramel-macchiato">Tìm hiểu thêm</a></div></div><div class="menu_item"><div class="menu_item_image"><a href="/products/latte" title="LATTE"><img src="//product.hstatic.net/1000075078/product/latte_dd6427d058294df5aa4745e5a6035a93_large.jpg" alt="latte"></a></div><div class="menu_item_info"><h3><a href="/products/latte" title="LATTE">LATTE</a></h3><div class="price_product_item">45,000 đ</div><a class="menu_item_action animate_btn" href="@Url.Action("Index","Order")" target="_blank" title="Mua Ngay">Mua ngay</a><a class="menu_item_action_view" href="/products/latte">Tìm hiểu thêm</a></div></div>
         </div>
     </div>
 </div>

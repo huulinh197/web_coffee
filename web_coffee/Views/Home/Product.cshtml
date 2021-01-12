@@ -23,7 +23,7 @@
                             <div class="menu_item_info bg_white">
                                 <h3><a href="@Url.Action("Detail","DetailProduct",new { id= p.MaSP})">@p.TenSP</a></h3>
                                 <div class="price_product_item">@p.Gia</div>
-                                <a class="menu_item_action animate_btn" href="#" target="_blank" title="Mua Ngay">Mua ngay</a>
+                                <a class="menu_item_action animate_btn" href="@Url.Action("Index","Order")" target="_blank" title="Mua Ngay">Mua ngay</a>
                             </div>
                         </div>
                     }

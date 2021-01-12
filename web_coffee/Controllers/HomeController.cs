@@ -24,16 +24,7 @@ namespace web_coffee.Controllers
         public ActionResult Product()
         {
             var sp = from p in db.SanPhams select p;
-            //var sp = from p in db.SanPhams
-            //         join c in db.Danh_Mucs on p.MaDM equals c.MaDM
-            //         select new
-            //         {
-            //             p.Gia,
-            //             p.Anh,
-            //             p.TenSP,
-            //             p.Danh_Muc.TenDM,
-
-            //         };
+           
                      
             return PartialView(sp);
            
